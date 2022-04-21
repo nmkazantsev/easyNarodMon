@@ -1,6 +1,6 @@
 #include "easyNarodMon.h";
 void NarodMonSender::addHead(String deviceId) {
-  text += "#" + deviceId + '\n';
+  text = "#" + deviceId + '\n';
 }
 void NarodMonSender::addSensor(String value, String sensorId) {
   text += "#" + sensorId + "#" + value + '\n';
