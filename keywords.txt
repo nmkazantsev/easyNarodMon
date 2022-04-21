@@ -1,0 +1,7 @@
+NarodMonSender	KEYWORD1
+
+addSensor	KEYWORD2
+sendData	KEYWORD2
+addHead	KEYWORD2
+
+enableDebug	KEYWORD3
