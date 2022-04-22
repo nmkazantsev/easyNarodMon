@@ -3,7 +3,8 @@
 #include <ESP8266WiFi.h>
 class NarodMonSender {
   public:
-    void addHead(String deviceId);
+    void setHead(String deviceId);
+    setHead(String device Id, String name, String lat, String lon, String alt) ;
     void addSensor(String value, String sensorId) ;
     void addSensor(float value, String sensorId) ;
     void addSensor(int value, String sensorId) ;
