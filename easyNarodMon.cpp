@@ -90,3 +90,28 @@ void NarodMonSender::enableDebug() {
 void NarodMonSender::disableDebug() {
   debug = false;
 }
+
+
+void NarodMonSender::connectWiFi(const char* ssid, const char* password) {
+  if (debug) {
+    Serial.println();
+    Serial.println();
+    Serial.print("Connecting to ");
+    Serial.println(ssid);
+  }
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    if (debug) {
+      Serial.print(".");
+    }
+  }
+  if (debug) {
+    Serial.println("");
+    Serial.println("WiFi connected");
+    Serial.println("IP address: ");
+    Serial.println(WiFi.localIP());
+  }
+}

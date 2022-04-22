@@ -8,10 +8,10 @@ class NarodMonSender {
     void addSensor(String value, String sensorId) ;
     void addSensor(double value, String sensorId) ;
     void addSensor(int value, String sensorId) ;
-	void addSensor(String value, String sensorId, String name) ;
+    void addSensor(String value, String sensorId, String name) ;
     void addSensor(double value, String sensorId, String name) ;
     void addSensor(int value, String sensorId, String name) ;
-    
+    void connectWiFi(const char* ssid, const char* password);
     String sendData();
     void enableDebug();
     void disableDebug();
