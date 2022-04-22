@@ -3,5 +3,6 @@ NarodMonSender	KEYWORD1
 addSensor	KEYWORD2
 sendData	KEYWORD2
 setHead	KEYWORD2
+connectWiFi	KEYWORD2
 
 enableDebug	KEYWORD3
