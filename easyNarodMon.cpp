@@ -1,10 +1,30 @@
 #include "easyNarodMon.h";
-void NarodMonSender::addHead(String deviceId) {
+void NarodMonSender::setHead(String deviceId) {
   text = "#" + deviceId + '\n';
+}
+void NarodMonSender::setHead(String device Id, String name, String lat, String lon, String alt) {
+  text = "#" + deviceId +"#" +lat+"#" +lon+"#" +alt+'\n';
 }
 void NarodMonSender::addSensor(String value, String sensorId) {
   text += "#" + sensorId + "#" + value + '\n';
 }
+void NarodMonSender::addSensor(float value, String sensorId) {
+  text += "#" + sensorId + "#" + String(value) + '\n';
+}
+void NarodMonSender::addSensor(int value, String sensorId) {
+  text += "#" + sensorId + "#" + String(value) + '\n';
+}
+
+void NarodMonSender::addSensor(String value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + value +"#" +name+ '\n';
+}
+void NarodMonSender::addSensor(float value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + String(value) +"#" +name+ '\n';
+}
+void NarodMonSender::addSensor(int value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + String(value) +"#" +name+'\n';
+}
+
 String NarodMonSender::sendData() {
   if (!serverConnected) {
     connectServer();

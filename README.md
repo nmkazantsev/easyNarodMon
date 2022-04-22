@@ -4,17 +4,21 @@ A library for esp8266 boards for easy communicating with https://narodmon.ru/
 Use standart procedure for installation: download zip-package and add .zip library in you Arduino IDE. Please, do not forget to check out an example.
 
 Short description:
-void addHead(String deviceId);
+
+void setHead(String deviceId);
 Starts a Stirng with request to server. Adds there headers and inserts there device id (usually mac address of device is being used)
 
+void setHead(String device Id, String name, String lat, String lon, String alt) ;
+Allows to also add Device name and coordinates of it from GPS
+
 void addSensor(String value, String sensorId) ;
+void addSensor(float value, String sensorId) ;
+void addSensor(int value, String sensorId) ;
 add a sensor to the request string. Please, call it only after addHead
+Also these functions are declared with additional String param: sensor name. 
 
 String sendData();
 Sends the generated requests, returns the answers from server or "connection error" if it happened
-
-void connectServer();
-connects to server, will be removed soon
 
 void enableDebug();
 allows library to print debug info to Serial
