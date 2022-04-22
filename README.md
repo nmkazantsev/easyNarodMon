@@ -13,9 +13,6 @@ add a sensor to the request string. Please, call it only after addHead
 String sendData();
 Sends the generated requests, returns the answers from server or "connection error" if it happened
 
-void connectServer();
-connects to server, will be removed soon
-
 void enableDebug();
 allows library to print debug info to Serial
 
