@@ -1,6 +1,8 @@
 # easyNarodMon
 A library for esp8266 boards for easy communicating with https://narodmon.ru/
 
+Please, write me about any features you would like to see in this library! 
+
 Use standart procedure for installation: download zip-package and add .zip library in you Arduino IDE. Please, do not forget to check out an example.
 
 Short description:
