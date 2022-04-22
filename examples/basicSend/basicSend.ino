@@ -33,11 +33,11 @@ void setup() {
 }
 
 void loop() {
-//add head starts a new request and enters there device id
-  mySender.addHead("device-id");
-//add sensor to your request, first param is value, second is id of sensor
-  mySender.addSensor("30", "sensor1-id");
-  mySender.addSensor("23", "sensor2-id");
-  mySender.sendData();//send request 
+  //set head starts a new request and enters there device id
+  mySender.setHead("device-id");
+  //add sensor to your request, first param is value, second is id of sensor
+  mySender.addSensor(30, "sensor1-id");
+  mySender.addSensor(23.5, "sensor2-id");
+  mySender.sendData();
   delay(300000); // execute once every 5 minutes, don't flood remote service
 }
