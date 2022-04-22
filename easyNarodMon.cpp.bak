@@ -26,10 +26,11 @@ void NarodMonSender::addSensor(int value, String sensorId, String name) {
 }
 
 String NarodMonSender::sendData() {
-  if (!client.connected()) {
+  if (!serverConnected) {
     connectServer();
   }
   if (!client.connected()) {
+    serverConnected = false;
     if (debug) {
       Serial.println("connection error");
     }
@@ -82,7 +83,7 @@ void NarodMonSender::connectServer() {
     }
     return;
   }
- 
+  serverConnected = true;
 }
 void NarodMonSender::enableDebug() {
   debug = true;
