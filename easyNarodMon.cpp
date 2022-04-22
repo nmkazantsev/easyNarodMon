@@ -22,7 +22,7 @@ void NarodMonSender::addSensor(float value, String sensorId, String name) {
   text += "#" + sensorId + "#" + String(value) +"#" +name+ '\n';
 }
 void NarodMonSender::addSensor(int value, String sensorId, String name) {
-  text += "#" + sensorId + "#" + String(value) + +"#" +name+'\n';
+  text += "#" + sensorId + "#" + String(value) +"#" +name+'\n';
 }
 
 String NarodMonSender::sendData() {
