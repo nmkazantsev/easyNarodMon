@@ -32,9 +32,9 @@ void setup() {
 }
 
 void loop() {
-  mySender.addHead("device-id");
-  mySender.addSensor("30", "sensor1-id");
-  mySender.addSensor("23", "sensor2-id");
+  mySender.setHead("device-id");
+  mySender.addSensor(30, "sensor1-id");
+  mySender.addSensor(23.5, "sensor2-id");
   mySender.sendData();
   delay(300000); // execute once every 5 minutes, don't flood remote service
 }

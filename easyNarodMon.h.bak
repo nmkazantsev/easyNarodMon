@@ -18,6 +18,7 @@ class NarodMonSender {
   private:
     const char* host = "narodmon.ru";
     const uint16_t port = 8283;
+    boolean serverConnected = false;
     boolean debug = false;
     String text = "";
     WiFiClient client;
