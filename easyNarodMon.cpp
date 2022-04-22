@@ -5,6 +5,13 @@ void NarodMonSender::addHead(String deviceId) {
 void NarodMonSender::addSensor(String value, String sensorId) {
   text += "#" + sensorId + "#" + value + '\n';
 }
+void NarodMonSender::addSensor(float value, String sensorId) {
+  text += "#" + sensorId + "#" + String(value) + '\n';
+}
+void NarodMonSender::addSensor(int value, String sensorId) {
+  text += "#" + sensorId + "#" + String(value) + '\n';
+}
+
 String NarodMonSender::sendData() {
   if (!serverConnected) {
     connectServer();
