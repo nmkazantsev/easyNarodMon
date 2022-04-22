@@ -15,6 +15,16 @@ void NarodMonSender::addSensor(int value, String sensorId) {
   text += "#" + sensorId + "#" + String(value) + '\n';
 }
 
+void NarodMonSender::addSensor(String value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + value +"#" +name+ '\n';
+}
+void NarodMonSender::addSensor(float value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + String(value) +"#" +name+ '\n';
+}
+void NarodMonSender::addSensor(int value, String sensorId, String name) {
+  text += "#" + sensorId + "#" + String(value) + +"#" +name+'\n';
+}
+
 String NarodMonSender::sendData() {
   if (!serverConnected) {
     connectServer();
