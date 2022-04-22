@@ -6,7 +6,6 @@ class NarodMonSender {
     void addHead(String deviceId);
     void addSensor(String value, String sensorId) ;
     String sendData();
-    void connectServer();
     void enableDebug();
     void disableDebug();
   private:
@@ -16,4 +15,5 @@ class NarodMonSender {
     boolean debug = false;
     String text = "";
     WiFiClient client;
+    void connectServer();
 };
