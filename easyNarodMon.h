@@ -5,6 +5,8 @@ class NarodMonSender {
   public:
     void addHead(String deviceId);
     void addSensor(String value, String sensorId) ;
+    void addSensor(float value, String sensorId) ;
+    void addSensor(int value, String sensorId) ;
     String sendData();
     void enableDebug();
     void disableDebug();
