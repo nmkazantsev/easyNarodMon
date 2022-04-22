@@ -9,6 +9,9 @@ Use standart procedure for installation: download zip-package and add .zip libra
 
 Short description:
 
+void connectWifi(const char* ssid, const char* pass);
+connect wifi like a usual esp example, just to clean up yuor code
+
 void setHead(String deviceId);
 Starts a Stirng with request to server. Adds there headers and inserts there device id (usually mac address of device is being used)
 
